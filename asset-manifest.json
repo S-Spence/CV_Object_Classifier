@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/CV_Object_Classifier/static/css/main.a617e044.chunk.css",
+    "main.js": "/CV_Object_Classifier/static/js/main.49a7fcc5.chunk.js",
+    "main.js.map": "/CV_Object_Classifier/static/js/main.49a7fcc5.chunk.js.map",
+    "runtime-main.js": "/CV_Object_Classifier/static/js/runtime-main.183b8be4.js",
+    "runtime-main.js.map": "/CV_Object_Classifier/static/js/runtime-main.183b8be4.js.map",
+    "static/js/2.53cb2ac8.chunk.js": "/CV_Object_Classifier/static/js/2.53cb2ac8.chunk.js",
+    "static/js/2.53cb2ac8.chunk.js.map": "/CV_Object_Classifier/static/js/2.53cb2ac8.chunk.js.map",
+    "static/js/3.1cdec1e9.chunk.js": "/CV_Object_Classifier/static/js/3.1cdec1e9.chunk.js",
+    "static/js/3.1cdec1e9.chunk.js.map": "/CV_Object_Classifier/static/js/3.1cdec1e9.chunk.js.map",
+    "index.html": "/CV_Object_Classifier/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/CV_Object_Classifier/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.53cb2ac8.chunk.js.LICENSE.txt": "/CV_Object_Classifier/static/js/2.53cb2ac8.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/CV_Object_Classifier/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.183b8be4.js",
+    "static/js/2.53cb2ac8.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.49a7fcc5.chunk.js"
+  ]
+}
