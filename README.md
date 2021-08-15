@@ -1,3 +1,7 @@
+# WIP: This is a quick sample project using the coco-ssd pre-trained model. I am working on linking a custom model to the project. 
+
+A [YouTube Tutorial](https://www.youtube.com/watch?v=SksXKCdeWkM) by CoderOne guided this sample project using TenforFlow.js and React. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
