@@ -1,6 +1,8 @@
-# WIP: This is a quick sample project using the coco-ssd pre-trained model. I am working on linking a custom model to the project. 
+## WIP: This is a quick sample project using the coco-ssd pre-trained model. I am working on linking a custom model to the project to increase classification accuracy for a specific task. 
 
 A [YouTube Tutorial](https://www.youtube.com/watch?v=SksXKCdeWkM) by CoderOne guided this sample project using TenforFlow.js and React. 
+
+The current project provides a simple user interface to classify images with the coco-ssd model. The application is deployed in [github pages](https://s-spence.github.io/CV_Object_Classifier/). Upload a sample image to test the classifier. The classifier will create boundary boxes around the items it has classified. The application also provides an accuracy metric for each boundary.  
 
 # Getting Started with Create React App
 
