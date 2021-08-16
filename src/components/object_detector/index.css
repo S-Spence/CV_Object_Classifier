@@ -1,0 +1,65 @@
+.object-detector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detector-container {
+    min-width: 300px;
+    height: 600px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.target-img {
+    height: 100%;
+}
+
+.select-button {
+    padding: 7px 10px;
+    border: 2px solid transparent;
+    background-color: #fff;
+    color: #0a0f22;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: sans-serif;
+    outline: none;
+    margin-top: 2em;
+    cursor: pointer;
+    transition: all 260ms ease-in-out;
+}
+
+.select-button:hover {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.hidden-file-input {
+    display: none;
+}
+
+.target-box {
+    position: absolute;
+    left: x + "px";
+    top: y + "px";
+    width: width + "px";
+    height: height + "px";
+    border: 4px solid #1ac71a;
+    background-color: transparent;
+    z-index: 20;
+}
+
+.target-box:before {
+    content: "${({ classType, score }) => `${classType} ${score.toFixed(1)}%`}";
+    color: #1ac71a;
+    font-weight: 500;
+    font-size: 17px;
+    position: absolute;
+    top: -1.5em;
+    left: -5px;
+}
