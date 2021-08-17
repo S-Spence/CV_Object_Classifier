@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react";
+import * as Styled from './styles';
+
 import "@tensorflow/tfjs-backend-cpu";
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
-import "./index.css";
+
 
 export function ObjectDetector(props) {
   const fileInputRef = useRef();
@@ -28,12 +30,12 @@ export function ObjectDetector(props) {
       const imgWidth = imageRef.current.width;
       const imgHeight = imageRef.current.height;
 
-      const x = (regX * imgWidth) / imgSize.width;
-      const y = (regY * imgHeight) / imgSize.height;
-      const width = (regWidth * imgWidth) / imgSize.width;
-      const height = (regHeight * imgHeight) / imgSize.height;
+      const normX = (regX * imgWidth) / imgSize.width;
+      const normY = (regY * imgHeight) / imgSize.height;
+      const normWidth = (regWidth * imgWidth) / imgSize.width;
+      const normHeight = (regHeight * imgHeight) / imgSize.height;
 
-      return { ...prediction, bbox: [x, y, width, height] };
+      return { ...prediction, bbox: [normX, normY, normWidth, normHeight] };
     });
   };
 
@@ -76,14 +78,12 @@ export function ObjectDetector(props) {
   };
 
   return (
-    <div className= {`object-detector-container ${ObjectDetector}`}>
-      <div className = {`detector-container ${ObjectDetector}`}>
-        {imgData && 
-          <div className ={`target-image ${ObjectDetector}`} src={imgData} ref={imageRef} />
-        }
+    <Styled.ObjectDetectorContainer>
+      <Styled.DetectorContainer>
+        {imgData && <Styled.TargetImg src={imgData} ref={imageRef} />}
         {!isEmptyPredictions &&
           predictions.map((prediction, idx) => (
-            <div className = {`target-box ${ObjectDetector}`}>
+            <Styled.TargetBox
               key={idx}
               x={prediction.bbox[0]}
               y={prediction.bbox[1]}
@@ -91,18 +91,17 @@ export function ObjectDetector(props) {
               height={prediction.bbox[3]}
               classType={prediction.class}
               score={prediction.score * 100}
-            </ div>
-          ))
-        } 
-      </ div>
-      <div className = {`hidden-file-input ${ObjectDetector}`}>
+            />
+          ))}
+      </Styled.DetectorContainer>
+      <Styled.HiddenFileInput
         type="file"
         ref={fileInputRef}
         onChange={onSelectImage}
-      </ div>
-      <div className= {`select-button ${ObjectDetector}`} onClick={openFilePicker}>
+      />
+      <Styled.SelectButton onClick={openFilePicker}>
         {isLoading ? "Recognizing..." : "Select Image"}
-      </ div>
-    </ div>
+      </Styled.SelectButton>
+    </Styled.ObjectDetectorContainer>
   );
 }
