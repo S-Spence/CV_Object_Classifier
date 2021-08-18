@@ -1,4 +1,4 @@
-## WIP: This is a quick sample project using the coco-ssd pre-trained model. I am working on linking a custom model to the project to increase classification accuracy for a specific task. 
+## WIP: This is a quick sample project using the coco-ssd pre-trained model. I am working on enhancing the user interface and providing more detailed instructions. I also plan to link a custom model to the project to increase classification accuracy for a specific task. 
 
 A [YouTube Tutorial](https://www.youtube.com/watch?v=SksXKCdeWkM) by CoderOne guided this sample project using TenforFlow.js and React. 
 
